@@ -26,9 +26,15 @@ GND | GND
 * 100 Ohm resistors
 * Relay module compatable with Arduino (to drive the doorstrike)
 
+## Initial Setup
+
+Once you have assembled the circuit as above, open the code above in the arduino software and replace the " ** ** ** ** " with the appropriate id of the RFID fob/card you wish to use. Upload the code to your arduino and you should be good to go.
+
 ## Operation
 
-Once you have assembled the circuit as above, open the code above in the arduino software and replace the " ** ** ** ** " with the appropriate id of the RFID fob/card you wish to use. Upload the code to your arduino and you should be good to go. Upon presenting the correct RFID fob to your RFID module the door strike relay (pin 2) should activate for 3 seconds. If you present an incorrect RFID fob the LED on pin 7 will light indefinitely until the arduino is reset. You could modify the code to include another input pin which will turn this LED off without needing to reset. If a user presses the button on pin 8, the LED on pin 4 will light for 10 seconds. Currently the code is written in a way which would stop the RFID module working while the Arduino is in the 10 second delay. I have a pushbutton on the inside of the room secured by this lock which is directly connected between the 12v supply and the doorstrike so I have no need for the RFID module to be active during this time as the external call button will likely only be used by people without the RFID fob necessary to operate the doorstrike from outside.
+Upon presenting the correct RFID fob to your RFID module the door strike relay (pin 2) should activate for 3 seconds. If you present an incorrect RFID fob the LED on pin 7 will light indefinitely until the arduino is reset. You could modify the code to include another input pin which will turn this LED off without needing to reset. 
+
+If a user presses the button on pin 8, the LED on pin 4 will light for 10 seconds. Currently the code is written in a way which would stop the RFID module working while the Arduino is in the 10 second delay. I have a pushbutton on the inside of the room secured by this lock which is directly connected between the 12v supply and the doorstrike so I have no need for the RFID module to be active during this time as the external call button will likely only be used by people without the RFID fob necessary to operate the doorstrike from outside.
 
 ## Future
 
