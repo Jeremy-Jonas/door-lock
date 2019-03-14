@@ -49,16 +49,16 @@ void loop() {
   Serial.println();
   Serial.print("Message : ");
   content.toUpperCase();
-  if (content.substring(1) == "** ** ** **") //change here the UID of the card that you want to give access
+  if (content.substring(1) == "** ** ** **") //replace the ** with the UID of the card that you want to give access
   {
-    Serial.println("Authorised access");
+    Serial.println("Authorised access"); //send "authorised access" message to the serial monitor (if arduino is connected to PC)
     Serial.println();
-    digitalWrite(2, HIGH);
+    digitalWrite(2, HIGH); //activate the relay which drives the electronic doorstrike
     delay(3000);
-    digitalWrite(2, LOW);
+    digitalWrite(2, LOW); //deactivate the relay which drives the electronic doorstrike
   }
 
-  else if (content.substring(1) == "** ** ** **")
+  else if (content.substring(1) == "** ** ** **") //add a second UID here if you want to use more than one card
   {
     Serial.println("Authorised access");
     Serial.println();
@@ -68,10 +68,8 @@ void loop() {
   }
  
   else   {
-    Serial.println(" Access denied");
-    digitalWrite(7, HIGH);
-    delay(3000);
-    
+    Serial.println("Access denied");
+    digitalWrite(7, HIGH); //illuminate led on pin 7 to indicate an access attempt was made with unauthorised card      
   }
   
 } 
