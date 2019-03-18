@@ -16,13 +16,19 @@ void setup()
   pinMode(7, OUTPUT);
   pinMode(4, OUTPUT);
   pinMode(8, INPUT_PULLUP);
+  pinMode(6, INPUT_PULLUP);
 
 }
 void loop() {
   int pin8 = digitalRead(8);
   if (pin8 == LOW) {
     digitalWrite(4, HIGH);
-    delay(10000);
+    //delay(10000);
+    //digitalWrite(4, LOW);
+  }
+
+  int pin6 = digitalRead(6);
+  if (pin6 == LOW) {
     digitalWrite(4, LOW);
   }
   // Look for new cards
