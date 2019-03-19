@@ -21,14 +21,12 @@ void setup()
 }
 void loop() {
   int pin8 = digitalRead(8);
-  if (pin8 == LOW) {
+  if (pin8 = LOW) {
     digitalWrite(4, HIGH);
-    //delay(10000);
-    //digitalWrite(4, LOW);
   }
 
   int pin6 = digitalRead(6);
-  if (pin6 == LOW) {
+  if (pin6 = LOW) {
     digitalWrite(4, LOW);
   }
   // Look for new cards
