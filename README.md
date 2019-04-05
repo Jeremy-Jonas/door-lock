@@ -23,7 +23,7 @@ GND | GND
 * RC522 RFID module
 * LEDs to suit
 * Switches/buttons to suit
-* 100 Ohm resistors
+* 220 Ohm resistors
 * Relay module compatable with Arduino (to drive the doorstrike)
 
 ## Initial Setup
