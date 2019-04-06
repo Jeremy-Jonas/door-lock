@@ -34,6 +34,7 @@ void setup()
   pinMode(doorStrike, OUTPUT);
   pinMode(unauthorisedLED, OUTPUT);
   pinMode(notificationLED, OUTPUT);
+  pinMode(resetRelay, OUTPUT);
   pinMode(8, INPUT_PULLUP); //have to use the pin numbers when initalising inputs due to using "digitalRead(x)" in the definitions
   pinMode(6, INPUT_PULLUP);
 
